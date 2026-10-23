@@ -1,0 +1,87 @@
+{
+  "msg_id": "CAMP04-01",
+  "spam_probability": 1.0,
+  "ai_assisted_probability": 1.0,
+  "origin_type": "fully_generated",
+  "origin_description": "Письмо целиком похоже на машинно-сгенерированное.",
+  "confidence": 0.99,
+  "verdict_summary": "Высокая вероятность спама/фишинга; вероятно использовался генеративный ии (fully_generated).",
+  "suspicious_elements": [
+    {
+      "layer": "Текст/стилометрия",
+      "observation": "Обнаружены клише, характерные для LLM-генерации: 'additionally', 'we are committed to', 'seamless experience'."
+    },
+    {
+      "layer": "HTML-структура",
+      "observation": "Изображения встроены как base64 внутри табличного шаблона — признак автоматической сборки письма."
+    },
+    {
+      "layer": "HTML-структура",
+      "observation": "Аномально плотная HTML-разметка на слово текста — письмо собрано генератором, а не сверстано человеком."
+    },
+    {
+      "layer": "HTML-структура",
+      "observation": "Комментарии автогенерируемого шаблона в HTML (2 шт.)."
+    },
+    {
+      "layer": "Ссылки/домены/CTA/QR",
+      "observation": "Домен не совпадает с упомянутым брендом: https://bit.ly/auth?id=4535058"
+    },
+    {
+      "layer": "Ссылки/домены/CTA/QR",
+      "observation": "Используются URL-шортенеры — сокрытие конечного адреса."
+    },
+    {
+      "layer": "Ссылки/домены/CTA/QR",
+      "observation": "QR-код + минимум ссылок в тексте — приём обхода фильтрации."
+    }
+  ],
+  "top_contributing_signals": [
+    {
+      "feature": "body_word_count",
+      "value": 45.0,
+      "group": "text",
+      "model_weight": 0.0
+    },
+    {
+      "feature": "subject_length",
+      "value": 44.0,
+      "group": "text",
+      "model_weight": 0.0
+    },
+    {
+      "feature": "max_url_length",
+      "value": 30.0,
+      "group": "url",
+      "model_weight": 0.0
+    },
+    {
+      "feature": "local_part_len",
+      "value": 11.0,
+      "group": "header",
+      "model_weight": 0.0
+    },
+    {
+      "feature": "html_tag_density",
+      "value": 11.0,
+      "group": "html",
+      "model_weight": 0.0
+    },
+    {
+      "feature": "max_nesting_depth",
+      "value": 9.0,
+      "group": "text",
+      "model_weight": 0.0
+    }
+  ],
+  "campaign": {
+    "campaign_id": "C001",
+    "size": 1,
+    "features": {
+      "campaign_size": 1.0
+    },
+    "explanations": [
+      "Группа из одного сообщения — кампания не подтверждена."
+    ]
+  }
+}
