@@ -1,0 +1,51 @@
+{
+  "spam": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        123,
+        0
+      ],
+      [
+        0,
+        198
+      ]
+    ]
+  },
+  "ai_assisted": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        169,
+        0
+      ],
+      [
+        0,
+        152
+      ]
+    ]
+  },
+  "applied_criteria": {
+    "robustness_to_masking_ai_recall": 1.0,
+    "partially_generated_ai_recall": 1.0,
+    "legit_ham_false_positive_rate": 0.0,
+    "legit_ham_spam_correct_rejection": 1.0,
+    "explanation_completeness_on_TP": 1.0
+  },
+  "campaign_grouping_vs_ground_truth": {
+    "pair_precision": 0.001,
+    "pair_recall": 1.0,
+    "pair_f1": 0.003,
+    "n_true_pairs": 261,
+    "n_pred_pairs": 180650
+  },
+  "n_train": 961,
+  "n_test": 321,
+  "model_cv": "skipped (--cv to enable)"
+}

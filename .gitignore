@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.pkl
+slop_detector/artifacts/
